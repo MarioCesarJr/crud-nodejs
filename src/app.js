@@ -14,8 +14,8 @@ mongoose.connect(process.env.MONGO_URL, {
   useFindAndModify: false
 });
 
-requireDir('./src/models');
+requireDir('./models');
 
-app.use('/api', require('./src/routes'));
+app.use('/api', require('./routes'));
 
-app.listen(3000);
+module.exports = app;
